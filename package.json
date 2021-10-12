@@ -1,6 +1,6 @@
 {
-  "name": "react-native-reanimated",
-  "version": "2.2.2",
+  "name": "react-native-reanimated-savv",
+  "version": "2.2.5",
   "description": "More powerful alternative to Animated library for React Native.",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -67,7 +67,7 @@
     "react-native-gesture-handler": "*"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
+    "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
@@ -99,8 +99,8 @@
     "jest": "^24.9.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.2.1",
-    "react": "17.0.1",
-    "react-native": "0.64.1",
+    "react": "17.0.2",
+    "react-native": "0.66.0",
     "react-native-gesture-handler": "^1.6.1",
     "react-test-renderer": "17.0.1",
     "release-it": "^13.1.1",
@@ -119,9 +119,7 @@
   },
   "release-it": {
     "hooks": {
-      "before:git:bump": [
-        "# check if version corresponds to changes in native files  \n  if git diff --name-only ${latestVersion} HEAD | egrep '(android/.*)|(ios/.*)' -q ; then egrep '\\.0$' -q <<< ${version} ; else true ; fi ;"
-      ]
+      "before:git:bump": []
     }
   },
   "@react-native-community/bob": {
